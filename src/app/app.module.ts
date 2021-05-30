@@ -12,6 +12,7 @@ import { DetailsComponent } from './products/details/details.component';
 import { UpdateComponent } from './products/update/update.component';
 import { UsersComponent } from './users/users.component';
 import { ListComponent } from './users/list/list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ListComponent } from './users/list/list.component';
     DetailsComponent,
     UpdateComponent,
     UsersComponent,
-    ListComponent
+    ListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
