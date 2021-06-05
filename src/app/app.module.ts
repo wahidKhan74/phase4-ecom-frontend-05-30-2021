@@ -11,6 +11,7 @@ import { ProductsModule } from './products/products.module';
 import { UsersModule } from './users/users.module';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule, ProductsModule, UsersModule, FormsModule,
