@@ -6,13 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ProductsComponent } from './products/products.component';
-import { CreateComponent } from './products/create/create.component';
-import { DetailsComponent } from './products/details/details.component';
-import { UpdateComponent } from './products/update/update.component';
-import { UsersComponent } from './users/users.component';
-import { ListComponent } from './users/list/list.component';
 import { HomeComponent } from './home/home.component';
+import { ProductsModule } from './products/products.module';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -20,16 +16,10 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    ProductsComponent,
-    CreateComponent,
-    DetailsComponent,
-    UpdateComponent,
-    UsersComponent,
-    ListComponent,
     HomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, ProductsModule, UsersModule,
     AppRoutingModule
   ],
   providers: [],
