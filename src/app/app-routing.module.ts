@@ -6,11 +6,13 @@ import { ProductsComponent } from './products/products.component';
 import { CreateComponent } from './products/create/create.component';
 import { UpdateComponent } from './products/update/update.component';
 import { DetailsComponent } from './products/details/details.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 const routes: Routes = [
   {path:'' , redirectTo:'/home',pathMatch:'full' },
   {path:'home' , component: HomeComponent},
   {path:'users', component:UsersComponent},
+  {path:'data-binding', component:DataBindingComponent},
   //map child routes
   {path:'products', children:[
     { path:'', component:ProductsComponent },

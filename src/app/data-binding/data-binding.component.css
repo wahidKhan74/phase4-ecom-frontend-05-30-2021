@@ -1,0 +1,22 @@
+.container {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.bg-con1 {
+    background-color: aquamarine;
+    padding: 20px;
+    border: 2px solid red;
+} 
+
+.bg-con2 {
+    background-color: grey;
+    padding: 20px;
+    border: 2px solid green;
+}
+
+.bg-con3 {
+    background-color: burlywood;
+    padding: 20px;
+    border: 2px solid brown;
+}

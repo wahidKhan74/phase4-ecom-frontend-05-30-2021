@@ -1,0 +1,38 @@
+<p>data-binding works!</p>
+
+<h3>Data Binding</h3>
+<div class="container" [style.background-color]="enabled ? 'grey' : 'white'">
+    <h4 [style.color]="'blue'">Interpolation based databinding</h4>
+    <p [style.font-size.px]="'24'">Usename : {{username}}</p>
+    <p [style.color]="color.RED">Age : {{age}}</p>
+    <p [style.color]="color.ORANGE" >Married : {{isMarried}}</p>
+    <p [style.font-size.px]="size.TWENTY" [style.color]="color.ORANGE">Email : {{email}}</p>
+    <p>Account details :- {{account.id}} - {{account.name}} - {{account.age}} - {{account.balance}}</p>
+    <!-- <img src="{{imageURl}}" alt=""> -->
+</div>
+
+<div class="container">
+    <h4 [class]="'bg-con1'">Property based databinding</h4>
+    <p [className]="'bg-con2'">Usename : <span [innerText]="username"></span></p>
+    <p [class]="enabled ? 'bg-con1' : 'bg-con3'">Age : <span [innerHTML]="age"></span></p>
+    <p [className]="'bg-con2 bg-con3'">Married : <span [innerText]="isMarried"></span></p>
+    <p>Email : <span [innerText]="email"></span></p>
+    <p>Account details :-  <span [innerText]="account.id"></span> - 
+        <span [innerText]="account.name"></span> - <span [innerText]="account.age"></span> 
+        <span [innerText]="account.balance"></span> </p>
+    <!-- <img [src]="imageURl" [alt]="imageURl" srcset=""> -->
+</div>
+
+<div class="container">
+    <h4> Event Binding</h4>
+    <button (click)="onChange()">Click Me</button>
+</div>
+
+<div class="container">
+    <h4> Two Data Binding</h4>
+    <p [innerText]="username"></p>
+    <input type="text" name="user" (input)="onUpdate($event)">
+    <br><br>
+    <p [innerText]="userText"></p>
+    <input type="text" name="username" [(ngModel)]="userText">
+</div>
