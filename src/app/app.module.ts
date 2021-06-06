@@ -10,8 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { ProductsModule } from './products/products.module';
 import { UsersModule } from './users/users.module';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,11 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     NavbarComponent,
     HomeComponent,
     DataBindingComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
-    BrowserModule, ProductsModule, UsersModule, FormsModule,
+    BrowserModule, ProductsModule, UsersModule, FormsModule, ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

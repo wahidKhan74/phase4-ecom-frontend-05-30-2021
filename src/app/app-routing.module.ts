@@ -8,6 +8,7 @@ import { UpdateComponent } from './products/update/update.component';
 import { DetailsComponent } from './products/details/details.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   {path:'' , redirectTo:'/home',pathMatch:'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'users', component:UsersComponent},
   {path:'data-binding', component:DataBindingComponent},
   {path:'template-form', component:TemplateFormComponent},
+  {path:'reactive-form', component:ReactiveFormComponent},
   //map child routes
   {path:'products', children:[
     { path:'', component:ProductsComponent },

@@ -1,0 +1,95 @@
+<h1>Reactive Driven Form</h1>
+<div class="container well well-lg">
+    <form class="row g-3 needs-validation" novalidate [formGroup]="exampleForm" (ngSubmit)="submitForm(exampleForm)"> 
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" 
+          formControlName="firstName">
+          <small *ngIf="hasError('firstName')" [class]="hasError('firstName') ? 'has-error' :''">
+            <div *ngIf="f.firstName.errors">
+                <span *ngIf="f.firstName.errors.required">First Name is a required field</span>
+                <span *ngIf="f.firstName.errors.minlength">First Name is a min 2 char long field</span>
+                <span *ngIf="f.firstName.errors.maxlength">First Name is a max 16 char long field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lastName" formControlName="lastName" name="lastName" >
+           <small *ngIf="hasError('lastName')" [class]="hasError('lastName') ? 'has-error' :''">
+            <div *ngIf="f.lastName.errors">
+                <span *ngIf="f.lastName.errors.required">Last Name is a required field</span>
+                <span *ngIf="f.lastName.errors.minlength">Last Name is a min 2 char long field</span>
+                <span *ngIf="f.lastName.errors.maxlength">Last Name is a max 16 char long field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <label for="userName" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="userName" aria-describedby="inputGroupPrepend"  name="userName"
+            formControlName="userName">
+          </div>
+          <small *ngIf="hasError('userName')" [class]="hasError('userName') ? 'has-error' :''">
+            <div *ngIf="f.userName.errors">
+                <span *ngIf="f.userName.errors.required">User Name is a required field</span>
+                <span *ngIf="f.userName.errors.minlength">User Name is a min 5 char long field</span>
+                <span *ngIf="f.userName.errors.maxlength">User Name is a max 10 char long field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" name="city" formControlName="city">
+          <small *ngIf="hasError('city')" [class]="hasError('city') ? 'has-error' :''">
+            <div *ngIf="f.city.errors">
+                <span *ngIf="f.city.errors.required">City Name is a required field</span>
+                <span *ngIf="f.city.errors.minlength">City Name is a min 5 char long field</span>
+                <span *ngIf="f.city.errors.maxlength">City Name is a max 10 char long field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" name="state" formControlName="state" >
+            <option selected disabled value="">Choose...</option>
+            <option value="NY">New York</option>
+            <option value="LA">Los Angeles</option>
+            <option value="CH">Chicago</option>
+            <option value="HT">Houston</option>
+          </select>
+          <small *ngIf="hasError('state')" [class]="hasError('state') ? 'has-error' :''">
+            <div *ngIf="f.state.errors">
+                <span *ngIf="f.state.errors.required">Sate Name  selection is a required field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <label for="zipcode" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="zipcode" name="zipcode" formControlName="zipcode">
+          <small *ngIf="hasError('zipcode')" [class]="hasError('zipcode') ? 'has-error' :''">
+            <div *ngIf="f.zipcode.errors">
+                <span *ngIf="f.zipcode.errors.required">Zipcode is a required field</span>
+                <span *ngIf="f.zipcode.errors.minlength">Zipcode is a min 6 char long field</span>
+                <span *ngIf="f.zipcode.errors.maxlength">Zipcode is a max 6 char long field</span>
+            </div>
+          </small>
+        </div>
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="agree" formControlName="agree">
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <small *ngIf="hasError('agree')" [class]="hasError('agree') ? 'has-error' :''">
+                <div *ngIf="f.agree.errors">
+                    <span *ngIf="f.agree.errors.required">Agree is a required field</span>
+                </div>
+              </small>
+          </div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-secondary" type="submit"  >Submit form</button>
+        </div>
+      </form>
+</div>
